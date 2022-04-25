@@ -56,8 +56,8 @@ func (q *Queue) IsRegister(name string) bool {
 	return ok
 }
 
-// Handle 处理任务消息
-func (q *Queue) Handle() {
+// Run 处理任务消息
+func (q *Queue) Run() {
 	var i time.Duration = 0
 	for {
 		str, err := q.client.RPop(context.Background(), CacheTaskName).Result()
