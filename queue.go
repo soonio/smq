@@ -94,7 +94,7 @@ func (q *Queue) Run() {
 		}
 
 		i++
-		i = i % 10
+		i = i % 3
 		if i > 0 {
 			time.Sleep(i * time.Second)
 		}
